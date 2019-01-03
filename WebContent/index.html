@@ -147,80 +147,7 @@
 		</div>
 	</section>
 
-	<section class="p-0" id="portfolio">
-		<div class="container-fluid p-0">
-			<div class="row no-gutters popup-gallery">
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="img/portfolio/fullsize/1.jpg"> <img
-						class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">Category</div>
-								<div class="project-name">Project Name</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="img/portfolio/fullsize/2.jpg"> <img
-						class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">Category</div>
-								<div class="project-name">Project Name</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="img/portfolio/fullsize/3.jpg"> <img
-						class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">Category</div>
-								<div class="project-name">Project Name</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="img/portfolio/fullsize/4.jpg"> <img
-						class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">Category</div>
-								<div class="project-name">Project Name</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="img/portfolio/fullsize/5.jpg"> <img
-						class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">Category</div>
-								<div class="project-name">Project Name</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="img/portfolio/fullsize/6.jpg"> <img
-						class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">Category</div>
-								<div class="project-name">Project Name</div>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="bg-dark text-white">
+	<section class="bg-dark text-white" id="portfolio">
 		<div class="container text-center">
 			<h2 class="mb-4">Free Download at Start Bootstrap!</h2>
 			<a class="btn btn-light btn-xl sr-button"
@@ -288,11 +215,6 @@
 				<form action="memberLogin.do" method="post">
 					<div class="form-group">
 						<div class="modal-body">
-							<div class="container">
-								<a href="./index.html"><img src="./images/kly.png"
-									style="display: block; height: 100px" /></a>
-							</div>
-
 							<h5>
 								<label>아이디</label>
 							</h5>
@@ -338,7 +260,7 @@
 										</div>
 
 										<div class="col-sm-3">
-											<button type="button" class="btn btn-info" id="checkButton"
+											<button type="button" class="btn btn-dark" id="checkButton"
 												onclick="idCheck()">중복체크</button>
 											<!-- 중복체크 완료시 disable -->
 										</div>
@@ -376,5 +298,30 @@
 			</div>
 		</div>
 	</div>
+
+	<form action="memberFindPass.do" method="post">
+		<div class="modal" id="MissingForm">
+			<div class="modal-dialog  modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">비밀번호 찾기</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<div class="modal-body">
+						현재 아이디를 입력하시면, 가입 정보에 기입된 이메일로 안내 메일을 발송해 드립니다. <input
+							class="form-control" type="text" name="memberID"
+							placeholder="아이디를 입력해주세요.">
+					</div>
+
+					<div class="modal-footer">
+						<p style="color: red;" id="passCheckMessage"></p>
+						<button class="btn btn-dark" type="submit">이메일 전송</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
 </body>
 </html>
